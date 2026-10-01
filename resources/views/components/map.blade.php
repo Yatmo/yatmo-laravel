@@ -1,0 +1,1 @@
+<iframe {{ $attributes->merge(['class' => 'yatmo-map']) }} src="{{ $src() }}" title="{{ $title }}" loading="lazy" allow="fullscreen" style="display:block;width:100%;height:{{ $cssHeight() }};border:0"></iframe>

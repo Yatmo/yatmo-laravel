@@ -1,0 +1,74 @@
+{
+    "name": "yatmo/laravel",
+    "description": "Real estate maps, points of interest and neighbourhood data for Laravel: Blade components for the property map, the nearest schools, shops and public transport with travel times, and a cached, server-rendered neighbourhood text for SEO. Laravel 10 to 13. Powered by Yatmo.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "yatmo",
+        "laravel",
+        "blade",
+        "real-estate",
+        "proptech",
+        "map",
+        "poi",
+        "points-of-interest",
+        "neighbourhood",
+        "property",
+        "listing",
+        "isochrone",
+        "seo"
+    ],
+    "homepage": "https://yatmo.com",
+    "support": {
+        "docs": "https://documentation.yatmo.com/api",
+        "issues": "https://github.com/Yatmo/yatmo-laravel/issues",
+        "source": "https://github.com/Yatmo/yatmo-laravel"
+    },
+    "authors": [
+        {
+            "name": "Yatmo",
+            "email": "support@yatmo.com",
+            "homepage": "https://yatmo.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "illuminate/contracts": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/view": "^10.0|^11.0|^12.0|^13.0",
+        "yatmo/yatmo-php": "^1.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.5|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yatmo\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yatmo\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yatmo\\Laravel\\YatmoServiceProvider"
+            ],
+            "aliases": {
+                "Yatmo": "Yatmo\\Laravel\\Facades\\Yatmo"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit --exclude-group live",
+        "test:live": "phpunit --group live"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
