@@ -16,5 +16,7 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: curl, json, mbstring
           coverage: none
+      # The client is taken from its GitHub tags, so a new client version is testable before Packagist picks it.
+      - run: composer config repositories.yatmo-php vcs https://github.com/Yatmo/yatmo-php
       - run: composer install --no-interaction --prefer-dist
       - run: composer test
